@@ -12,7 +12,8 @@ Objectif du script :
 ===============================================================================
 
 
-
+CREATE OR ALTER PROCEDURE bronze.load_bronze AS
+BEGIN
 BULK INSERT bronze.crm_cust_info
 FROM 'C:\Users\rajas\Downloads\sql-data-warehouse-project\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
 WITH ( 
@@ -62,3 +63,4 @@ BULK INSERT bronze.erp_px_cat_g1v2
 			FIELDTERMINATOR = ',',
 			TABLOCK
 		);
+		End 
